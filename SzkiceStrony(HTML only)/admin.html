@@ -2,15 +2,190 @@
 <html lang="pl" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
     <title>XYZ Sp. z o.o. - Panel Administratora</title>
   </head>
   <body>
 
     <header>
+      <div id="time">
+        Poniedziałek, 14.03.2022
+        <br>
+        <h1>21<sup>37</sup></h1>
+      </div>
 
+      <div id="logo">
+        <img src="../Resources/logo3.png" alt="Logo Firmy XYZ">
+      </div>
+
+      <div id="logout">
+        <a href="./index.html">
+          <img src="../Resources/logout.svg" alt="logout">
+          <p>Wyloguj się</p>
+        </a>
+      </div>
     </header>
 
     <main>
+
+      <h1>Witaj Uma Jan!</h1>
+
+      <div id="top">
+
+        <div id="adduser" class="panel">
+          <h3>Oczekujący Użytkownicy</h3>
+          <div class="tablescroll">
+            <table>
+              <tr>
+                <th>ID</th>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Login</th>
+                <th>Zaakceptuj</th>
+                <th>Usuń</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Jonek</td>
+                <td>Undrych</td>
+                <td>Y0neck</td>
+                <td><a href="#"><img src="../Resources/accept.svg" alt="accept"></a></td>
+                <td><a href="#"><img src="../Resources/delete.svg" alt="delete"></a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Miłosz</td>
+                <td>Lupiński</td>
+                <td>Milup</td>
+                <td><a href="#"><img src="../Resources/accept.svg" alt="accept"></a></td>
+                <td><a href="#"><img src="../Resources/delete.svg" alt="delete"></a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Jakub</td>
+                <td>Bałaniuk</td>
+                <td>JakuBOSS</td>
+                <td><a href="#"><img src="../Resources/accept.svg" alt="accept"></a></td>
+                <td><a href="#"><img src="../Resources/delete.svg" alt="delete"></a></td>
+              </tr>
+            </table>
+          </div>
+          <h3>Dodaj Użytkownika</h3>
+          <form class="adduser" action="admin.html" method="post">
+            <select name="role" id="role">
+              <option value="" disabled selected>Wybierz Rolę</option>
+              <option value="1">Administrator</option>
+              <option value="2">Przełożony</option>
+              <option value="3">Pracownik</option>
+            </select>
+              <input type="text" name="name" placeholder="Imię">
+              <input type="text" name="surname" placeholder="Nazwisko">
+              <input type="text" name="login" placeholder="Login">
+              <input type="password" name="password" placeholder="Hasło">
+            <input type="submit" name="adduser" value="Dodaj użytkownika!">
+          </form>
+
+        </div>
+
+        <div id="usermodify" class="panel">
+          <h3>Zarządzanie Użytkownikami</h3>
+          <div class="tablescroll">
+            <table>
+              <tr>
+                <th>ID</th>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Login</th>
+                <th>Modyfikuj</th>
+                <th>Usuń</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Wojciech</td>
+                <td>Bonna</td>
+                <td>Wojtkek</td>
+                <td><a href="#"><img src="../Resources/edit.svg" alt="edit"></a></td>
+                <td><a href="#"><img src="../Resources/delete.svg" alt="delete"></a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Patrick</td>
+                <td>Wierzbmann</td>
+                <td>Patwierzb</td>
+                <td><a href="#"><img src="../Resources/edit.svg" alt="edit"></a></td>
+                <td><a href="#"><img src="../Resources/delete.svg" alt="delete"></a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Uma</td>
+                <td>Jam</td>
+                <td>Problem?</td>
+                <td><a href="#"><img src="../Resources/edit.svg" alt="edit"></a></td>
+                <td><a href="#"><img src="../Resources/delete.svg" alt="delete"></a></td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="bottom">
+
+        <div id="worktimemodify" class="panel">
+          <h3>Modyfikacja Czasu Pracy</h3>
+          <div class="tablescroll">
+            <table>
+              <tr>
+                <th>ID</th>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Data</th>
+                <th>Czas</th>
+                <th>Modyfikuj</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Wojciech</td>
+                <td>Bonna</td>
+                <td>14.03.2022</td>
+                <td>8:50</td>
+                <td><a href="#"><img src="../Resources/edit.svg" alt="edit"></a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Patrick</td>
+                <td>Wierzbmann</td>
+                <td>14.03.2022</td>
+                <td>8:00</td>
+                <td><a href="#"><img src="../Resources/edit.svg" alt="edit"></a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Uma</td>
+                <td>Jam</td>
+                <td>14.03.2022</td>
+                <td>7:45</td>
+                <td><a href="#"><img src="../Resources/edit.svg" alt="edit"></a></td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+
+        <div id="comment" class="panel" style="width: 50%;">
+          <h3>Komentuj</h3>
+          <form class="commentform" id="commentform" action="superior.html" method="post">
+            <label for="commentdate">
+              <input type="date" name="commentdate">
+            </label>
+            <textarea name="commentcontent" rows="5" cols="50" placeholder="Napisz komentaż..." form="commentform"></textarea>
+            <input type="submit" name="addcomment" value="Dodaj komentaż!">
+            <input type="submit" name="showcomment" value="Pokaż komentaże!">
+          </form>
+        </div>
+
+      </div>
 
     </main>
 

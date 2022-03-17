@@ -2,15 +2,133 @@
 <html lang="pl" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
     <title>XYZ Sp. z o.o. - Panel Przełożonego</title>
   </head>
   <body>
 
     <header>
+      <div id="time">
+        Poniedziałek, 14.03.2022
+        <br>
+        <h1>21<sup>37</sup></h1>
+      </div>
 
+      <div id="logo">
+        <img src="../Resources/logo3.png" alt="Logo Firmy XYZ">
+      </div>
+
+      <div id="logout">
+        <a href="./index.html">
+          <img src="../Resources/logout.svg" alt="logout">
+          <p>Wyloguj się</p>
+        </a>
+      </div>
     </header>
 
     <main>
+
+      <h1>Witaj Boss!</h1>
+
+      <div id="top">
+
+        <div id="confirmworktime" class="panel">
+          <h3>Zatwierdź Czas Pracy</h3>
+          <div class="tablescroll">
+            <table>
+              <tr>
+                <th>ID</th>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Data</th>
+                <th>Czas</th>
+                <th>Zaakceptuj</th>
+                <th>Usuń</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Wojciech</td>
+                <td>Bonna</td>
+                <td>15.03.2022</td>
+                <td>7:45</td>
+                <td><a href="#"><img src="../Resources/accept.svg" alt="accept"></a></td>
+                <td><a href="#"><img src="../Resources/delete.svg" alt="delete"></a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Patrick</td>
+                <td>Wierbmann</td>
+                <td>15.03.2022</td>
+                <td>8:00</td>
+                <td><a href="#"><img src="../Resources/accept.svg" alt="accept"></a></td>
+                <td><a href="#"><img src="../Resources/delete.svg" alt="delete"></a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Uma</td>
+                <td>Jam</td>
+                <td>15.03.2022</td>
+                <td>7:30</td>
+                <td><a href="#"><img src="../Resources/accept.svg" alt="accept"></a></td>
+                <td><a href="#"><img src="../Resources/delete.svg" alt="delete"></a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div id="addworktime" class="panel">
+          <h3>Dodaj Czas Pracy</h3>
+          <form class="addworktime" action="superior.html" method="post">
+            <select name="worker" id="worker">
+              <option value="" disabled selected>Wybierz Pracownika</option>
+              <option value="1">Wojciech Bonnna</option>
+              <option value="2">Patrick Wierzbmann</option>
+              <option value="3">Uma Jan</option>
+              <option value="4">Wojciech Challanger</option>
+              <option value="5">Sławomir Koloc</option>
+            </select>
+            <input type="date" name="date">
+            <input type="time" name="time">
+            <input type="submit" name="addworktime" value="Dodaj!">
+          </form>
+        </div>
+
+      </div>
+
+      <div id="bottom">
+
+        <div id="summary" class="panel">
+          <h3>Miesięczne Podsumowanie</h3>
+          <form class="summary" action="superior.html" method="post">
+              <select name="worker" id="worker">
+                <option value="" disabled selected>Wybierz Pracownika</option>
+                <option value="1">Wojciech Bonnna</option>
+                <option value="2">Patrick Wierzbmann</option>
+                <option value="3">Uma Jan</option>
+                <option value="4">Wojciech Challanger</option>
+                <option value="5">Sławomir Koloc</option>
+              </select>
+            </label>
+            <input type="month" name="month">
+          </form>
+          <h4>Wybrano Miesiąc:</h4>
+          <h4>Przepracowane Dni:</h4>
+          <h4>Przepracowane Godziny:</h4>
+        </div>
+
+        <div id="comment" class="panel" style="width: 50%;">
+          <h3>Komentuj</h3>
+          <form class="commentform" id="commentform" action="superior.html" method="post">
+            <label for="commentdate">
+              <input type="date" name="commentdate">
+            </label>
+            <textarea name="commentcontent" rows="5" cols="50" placeholder="Napisz komentaż..." form="commentform"></textarea>
+            <input type="submit" name="addcomment" value="Dodaj komentaż!">
+            <input type="submit" name="showcomment" value="Pokaż komentaże!">
+          </form>
+        </div>
+
+      </div>
 
     </main>
 
