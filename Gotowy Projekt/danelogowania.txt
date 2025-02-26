@@ -1,0 +1,11 @@
+Admin:
+  login: Gunnix
+  hasło: Elektro
+
+Przełożony:
+  login: MikeY
+  hasło: HeeHee
+
+Pracownik:
+  login: Gl0bus
+  hasło: GlobeMaster0
