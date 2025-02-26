@@ -1,0 +1,206 @@
+/* USED COLORS*/
+
+/*
+  #008080
+  #20B2AA
+  #66CDAA
+  #87CEEB
+*/
+
+/* HTML */
+
+html {
+  height: 100%;
+}
+
+/* BODY */
+
+body {
+  background-color: #008080;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  background-color: #20B2AA;
+}
+
+#time {
+  text-align: center;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+#headerbutton a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+#headerbutton a img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: #20B2AA;
+  position: fixed;
+  bottom: 0;
+  height: 20px;
+  width: 100%;
+}
+
+/* MAIN */
+
+main {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* PANELS AND FORM */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  background-color: white;
+  border: 10px solid #66CDAA;
+  border-radius: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+}
+
+form > select {
+  width: 100%;
+  padding: 16px;
+  margin: 4px;
+}
+
+input {
+  padding: 16px;
+  margin: 4px;
+  color: black;
+}
+
+input:focus {
+  background-color: #66CDAA;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #white;
+  border: 2px solid #66CDAA;
+  width: 100%;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  margin: 4px;
+  border-radius: 12px;
+  transition-duration: 0.5s;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+  background-color: #66CDAA;
+  color: white;
+}
+
+/* TABLES */
+
+table, th, td {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+th {
+  text-decoration: underline;
+}
+
+.tablescroll {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+/* WORKER */
+
+#worktime {
+  width: 50%;
+}
+
+#summary {
+  width: 50%;
+}
+
+/* SUPERIOR */
+
+#confirmworktime {
+  width: 50%;
+}
+
+#addworktime {
+  width: 50%;
+}
+
+/* ADMIN */
+
+#adduser {
+  width: 50%;
+}
+
+#usermodify {
+  width: 50%;
+}
+
+#worktimemodify {
+  width: 50%;
+}

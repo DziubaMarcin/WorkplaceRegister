@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>XYZ Sp. z o.o. - Panel Pracownika</title>
+  </head>
+  <body>
+
+    <header>
+      <div id="time">
+        <span id="date">
+          Czwartek, 01/01/1970
+        </span>
+        <br>
+        <h1>
+          <span id="hours">
+            00            
+          </span>
+          <sup>
+            <span id="minutes">
+              01
+            </span>
+          </sup>
+        </h1>
+      </div>
+
+      <div id="logo">
+        <img src="../Resources/logo3.png" alt="Logo Firmy XYZ">
+      </div>
+
+      <div id="headerbutton">
+        <a href="./index.html">
+          <img src="../Resources/logout.svg" alt="logout">
+          <p>Wyloguj się</p>
+        </a>
+      </div>
+    </header>
+
+    <main>
+
+      <h1>Witaj Janusz!</h1>
+
+      <div id="top">
+
+        <div id="worktime" class="panel">
+          <h3>Dodaj Przepracowane Godziny</h3>
+          <form class="worktime" action="worker.html" method="post">
+            <label for="date">
+              Wybierz Dzień:
+              <br>
+              <input type="date" name="date">
+            </label>
+            <br>
+            <label for="time">
+              Wprowadź Czas:
+              <br>
+              <input type="time" name="time">
+            </label>
+            <input type="submit" name="addtime" value="Dodaj czas!">
+          </form>
+          <h4>Czas pracy musi zostać zatwierdzony przez przełożonego!!!</h4>
+
+        </div>
+
+        <div id="summary" class="panel">
+          <h3>Miesięczne Podsumowanie</h3>
+          <form class="summary" action="worker.html" method="post">
+            <label for="month">
+              Wybierz Miesiąc:
+              <br>
+              <input type="month" name="month">
+            </label>
+          </form>
+          <h4>Wybrano Miesiąc:</h4>
+          <h4>Przepracowane Dni:</h4>
+          <h4>Przepracowane Godziny:</h4>
+        </div>
+
+      </div>
+
+      <div id="bottom">
+
+        <div id="comment" class="panel" style="width: 100%;">
+          <h3>Komentuj</h3>
+          <form class="commentform" id="commentform" action="worker.html" method="post">
+            <label for="commentdate">
+              Wybierz Dzień:
+              <br>
+              <input type="date" name="commentdate">
+            </label>
+            <textarea name="commentcontent" rows="5" cols="50" placeholder="Napisz komentaż..." form="commentform"></textarea>
+            <input type="submit" name="addcomment" value="Dodaj komentaż!">
+            <input type="submit" name="showcomment" value="Pokaż komentaże!">
+          </form>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="copyright">
+        |Copyright ©2022 XYZ Sp.  z  o. o.|
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      
+      function updateTime(){
+        var currentTime = new Date()
+        var year = currentTime.getFullYear()
+        var month = currentTime.getMonth()
+        var day = currentTime.getDate()
+        var weekday = currentTime.getDay()
+        var hours = currentTime.getHours()
+        var minutes = currentTime.getMinutes()
+        if (minutes < 10){
+            minutes = "0" + minutes
+        }
+        var weekdays = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Niedziela'];
+          var weekdayname = weekdays[weekday];
+        document.querySelector('#date').textContent = (weekdayname+", "+day+'/'+month+'/'+year); 
+      document.querySelector('#hours').textContent = (hours);
+      document.querySelector('#minutes').textContent = (minutes);
+    }
+
+    setInterval(updateTime, 10);
+
+    </script>
+
+  </body>
+</html>
